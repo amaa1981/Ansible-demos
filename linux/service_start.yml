@@ -1,9 +1,9 @@
 ---
 - name: Start service
-  hosts: web
+  hosts: "{{ _hosts | default('web') }}"
   become: true
   vars:
-    service_name: httpd
+    service_name: undef
 
   tasks:
     - name: Check Service
