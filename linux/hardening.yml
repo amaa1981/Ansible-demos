@@ -3,7 +3,7 @@
   hosts: "{{ _hosts | default('web') }}"
   become: true
   vars:
-    harden_firewall: true
+    harden_firewall: false
     harden_time: true
     harden_ssh: true
     harden_pci: false
